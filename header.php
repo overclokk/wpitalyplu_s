@@ -14,7 +14,6 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
 <script src="http://yui.yahooapis.com/3.11.0/build/yui/yui-min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700italic' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
@@ -76,4 +75,4 @@ YUI({
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content pure-g-r">
