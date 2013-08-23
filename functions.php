@@ -2,6 +2,7 @@
 /**
  * wpitalyplu_s functions and definitions
  *
+ * Commento aggiunto da Andrea
  * @package wpitalyplu_s
  */
 
