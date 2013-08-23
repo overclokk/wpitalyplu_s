@@ -84,7 +84,7 @@ add_action( 'widgets_init', 'wpitalyplu_s_widgets_init' );
  * Enqueue scripts and styles
  */
 function wpitalyplu_s_scripts() {
-	wp_enqueue_style( 'wpitalyplu_s-style', get_stylesheet_directory_uri() .'/css/pure.css' );
+	wp_enqueue_style( 'wpitalyplu_s-style', get_stylesheet_directory_uri() .'/css/pure3.css' );
 
 	wp_enqueue_script( 'wpitalyplu_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
