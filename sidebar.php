@@ -5,7 +5,7 @@
  * @package wpitalyplu_s
  */
 ?>
-	<div id="secondary" class="widget-area" role="complementary">
+	<div id="secondary" class="widget-area pure-u-1-5" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
