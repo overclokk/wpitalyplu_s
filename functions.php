@@ -41,6 +41,10 @@ function wpitalyplu_s_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
+	/*add a custom image size for postcards*/
+
+	add_image_size( 'postcard', 420 , 250 , true );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -85,7 +89,7 @@ add_action( 'widgets_init', 'wpitalyplu_s_widgets_init' );
  */
 function wpitalyplu_s_scripts() {
 	wp_enqueue_style( 'wpitalyplu_s-style', get_stylesheet_directory_uri() .'/css/pure.css' );
-		
+	
 	wp_enqueue_style( 'wpitalyplu_s-my-style', get_stylesheet_directory_uri() .'/css/style.css' );
 
 	wp_enqueue_script( 'wpitalyplu_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -139,7 +143,7 @@ function special_nav_class($classes, $item){
 /*Custom excerpt leight. Change number after return to set the number of words you want*/
 
 function custom_excerpt_length( $length ) {
-	return 150;
+	return 100;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

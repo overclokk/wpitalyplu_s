@@ -4,35 +4,13 @@
  */
     
 ?>
-
+<div class="postcard-container pure-u-2-5 pure-g-r">
 <article id="post-<?php the_ID(); ?>" <?php post_class( ); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
+		
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="container-top"><div class="pure-u-1-5 avatar-container"><?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?></div><div class="entry-meta pure-u-4-5">
 			<?php wpitalyplu_s_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wpitalyplu_s' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'wpitalyplu_s' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
-
-	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
@@ -40,7 +18,7 @@
 				if ( $categories_list && wpitalyplu_s_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'wpitalyplu_s' ), $categories_list ); ?>
+				<?php printf( __( 'in %1$s', 'wpitalyplu_s' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
@@ -60,5 +38,29 @@
 		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'wpitalyplu_s' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
-</article><!-- #post-## -->
+	</div></div><!-- .entry-meta -->
+		<?php endif; ?>
+		<h1 class="pure-u entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+	</header><!-- .entry-header -->
+	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+	<div class="entry-summary pure-u">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
+	<?php else : ?>
+	<div class="entry-content pure-u">
+		<?php the_excerpt(); ?><a class="" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More', 'wpitalyplu_s' ); ?></a>
+		<div class="pure-u"><!--Post Thumbnail-->
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php 
+						if ( has_post_thumbnail() ) {
+						the_post_thumbnail('postcard');
+			}?></a>
+			</div><!--End Post Thumbnail-->
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'wpitalyplu_s' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
+	<?php endif; ?>
+</article></div><!-- #post-## -->

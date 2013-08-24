@@ -1,9 +1,47 @@
 .site-title {
-background-color: #ff0000;
+/*background-color: #ff0000;*/
 }
 .pure-menu .site-title a{
-color: #ffffff;
+/*color: #ffffff;*/
 }
 .site-content {
-margin: 3em 1em 0 1em;
+	margin-top: 4em;
+	margin-left: 2em;
+}
+.postcard-container {
+	background-color: #ffffff;
+	/*margin-right: 2em;*/
+	padding: 20px 20px 20px;
+	border: solid #E5E5E5;
+	border-width: 1px 1px 2px 1px;
+	border-radius: 3px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+}
+.container-top{
+	border-bottom: 1px solid #e5e5e5;
+}
+.pure-skin-wpitalyplus .pure-menu.pure-menu-horizontal {
+	-webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+}
+h1.entry-title{
+	font-size: 1em;
+}
+.entry-title{
+	margin-top: 10px;
+	padding-top: 8px;
+}
+.entry-content{
+	font-size:.80em;
+}
+.entry-meta{
+	font-size: 0.85em;
+	margin-top: 10px;
+}
+img.avatar{
+	border-radius: 50px;
+}
+img.attachment-postcard {
+	margin: 0 auto;
+	border: 1px solid #e5e5e5;
 }
