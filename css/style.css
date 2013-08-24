@@ -1,0 +1,9 @@
+.site-title {
+background-color: #ff0000;
+}
+.pure-menu .site-title a{
+color: #ffffff;
+}
+.site-content {
+margin: 3em 1em 0 1em;
+}
