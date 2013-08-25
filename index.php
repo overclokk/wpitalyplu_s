@@ -12,8 +12,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area pure-u-4-5">
+<div class="pure-u-2-3">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -28,9 +28,7 @@ get_header(); ?>
 					 */
 					get_template_part( 'content', get_post_format() );
 				?>
-
 			<?php endwhile; ?>
-
 			<?php wpitalyplu_s_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
@@ -40,7 +38,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div></div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

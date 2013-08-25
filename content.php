@@ -4,9 +4,10 @@
  */
     
 ?>
-<div class="postcard-container pure-u-2-5 pure-g-r">
-<article id="post-<?php the_ID(); ?>" <?php post_class( ); ?>>
-	<header class="entry-header">
+<div class="pure-u">
+<div class="postcard-container">
+<article id="post-<?php the_ID(); ?>" class="pure-u">
+	<header class="entry-header pure-u">
 		
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="container-top"><div class="pure-u-1-5 avatar-container"><?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?></div><div class="entry-meta pure-u-4-5">
@@ -63,4 +64,4 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-</article></div><!-- #post-## -->
+</article></div></div><!-- #post-## -->

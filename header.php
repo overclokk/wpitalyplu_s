@@ -74,5 +74,5 @@ YUI({
 </script>-->
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content pure-g-r">
+	<div class="pure-g-r">
+	<div id="content" class="site-content">
