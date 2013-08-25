@@ -1,0 +1,97 @@
+/*
+ * Questo file conterra' tutte le regole che devono essere applicate fino 
+ * ad un massimo di 480px
+ * 
+ * In linea di massima al suo interno verranno messe tutte le regole generali del tema
+ * (un po' come fa Bones) ma con meno breakpoint
+ */
+
+//Principalmente verranno inserite tutte le regole dei vari file *-r.less
+
+//Inclusione da grids-r.less
+//Tutti gli elementi devono avere una grandezza del 100%
+.pure-g-r > .pure-u, .pure-g-r > [class *= "pure-u-"] {
+    width: 100%;
+}
+
+//Inclusione forms-r.less
+// Start context
+.pure-form {
+
+    button[type="submit"] {
+        margin: 0.7em 0 0;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+} // End context
+
+// Start context
+.pure-group {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    label {
+        margin-bottom:0;
+    }
+} // End context
+
+// Start context
+.pure-form-aligned {
+    .pure-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display:block;
+        width: 100%;
+    }
+    .pure-controls {
+        margin: 1.5em 0 0 0;
+    }
+} // End context
+
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+.pure-form .pure-help-inline,
+.pure-form-message-inline,
+.pure-form-message {
+    display: block;
+    font-size: 80%;
+    /* Increased bottom padding to make it group with its related input element. */
+    padding: 0.2em 0 0.8em;
+}
+
+//Inclusione menus-r.less
+.pure-menu-horizontal {
+    width: 100%;
+}
+
+.pure-menu-children li {
+    display: block;
+    border-bottom: 1px solid black;
+}
