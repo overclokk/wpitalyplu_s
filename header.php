@@ -15,7 +15,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <script src="http://yui.yahooapis.com/3.11.0/build/yui/yui-min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700italic' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 </head>
 

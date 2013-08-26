@@ -10,7 +10,7 @@
 	<header class="entry-header pure-u">
 		
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="container-top"><div class="pure-u-1-5 avatar-container"><?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?></div><div class="entry-meta pure-u-4-5">
+		<div class="container-top"><div class="pure-u-1-5 avatar-container"><?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?></div><div class="entry-meta pure-u-3-5">
 			<?php wpitalyplu_s_posted_on(); ?>
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
@@ -49,8 +49,8 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content pure-u">
-		<?php the_excerpt(); ?><a class="" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More', 'wpitalyplu_s' ); ?></a>
-		<div class="pure-u"><!--Post Thumbnail-->
+		<?php the_excerpt(); ?><a class="" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More', 'wpitalyplu_s' ); ?></a><p></p>
+		<div class="pure-u cover-attachment-postcard"><!--Post Thumbnail-->
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php 
 						if ( has_post_thumbnail() ) {
 						the_post_thumbnail('postcard');
