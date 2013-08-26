@@ -2,7 +2,7 @@
 /*background-color: #ff0000;*/
 }
 .pure-menu .site-title a{
-/*color: #ffffff;*/
+	font-weight: 300;
 }
 .pure-skin-wpitalyplus .pure-form input.pure-button-small {
     font-size: 80%;
@@ -13,6 +13,7 @@
 }
 .postcard-container {
 	background-color: #ffffff;
+	margin-left: 2em;
 	margin-right: 2em;
 	margin-top: 1em;
 	padding: 20px 20px 20px;
@@ -23,7 +24,6 @@
 }
 .widget {
 	background-color: #ffffff;
-	margin-left: 2em;
 	margin-right: 2em;
 	margin-top: 1em;
 	padding: 20px 20px 20px;
@@ -86,7 +86,7 @@
 	margin-top: 2em;
 }
 .site-content {
-	margin-top: 10em;
+	margin-top: 11em;
 }
 }
 .container-top{
@@ -153,5 +153,4 @@ img.attachment-postcard {
 h1.site-title a:hover {
 	text-decoration: none;
 	color: #999;
-	font-weight: 700;
 }

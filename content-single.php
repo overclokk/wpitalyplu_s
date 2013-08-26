@@ -3,14 +3,25 @@
  * @package wpitalyplu_s
  */
 ?>
-
+<div class="postcard-container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<div class="container-top">
+			<div class="avatar-container pure-u-1-5">
+			<?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?>
+			</div>
+			<div class="entry-meta pure-u-3-5">
 
-		<div class="entry-meta">
+		<div class="">
 			<?php wpitalyplu_s_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		</div></div><!-- .entry-meta -->
+		<h1 class="entry-title pure-u"><?php the_title(); ?></h1>
+		<div class="pure-u cover-attachment-postcard"><!--Post Thumbnail-->
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php 
+						if ( has_post_thumbnail() ) {
+						the_post_thumbnail('postcard');
+			}?></a>
+			</div><!--End Post Thumbnail-->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
