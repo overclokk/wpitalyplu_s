@@ -14,7 +14,6 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<script src="http://yui.yahooapis.com/3.11.0/build/yui/yui-min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700italic' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 </head>
@@ -38,7 +37,7 @@
 							'container'       => '',
 							'container_class' => '',
 							'container_id'    => '',
-							'menu_class'      => '',
+							'menu_class'      => 'nav-menu',
 							'menu_id'         => '',
 							'echo'            => true,
 							'fallback_cb'     => 'wp_page_menu',
@@ -54,24 +53,6 @@
 						wp_nav_menu( $defaults ); //call menu here
 
 						?>
-						<!--<script>
-YUI({
-    classNamePrefix: 'pure'
-}).use('gallery-sm-menu', function (Y) {
-
-    var horizontalMenu = new Y.Menu({
-        container         : '#site-navigation',
-        sourceNode        : '#pure-nav',
-        orientation       : 'horizontal',
-        hideOnOutsideClick: false,
-        hideOnClick       : false
-    });
-
-    horizontalMenu.render();
-    horizontalMenu.show();
-
-});
-</script>-->
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div class="pure-g-r">
