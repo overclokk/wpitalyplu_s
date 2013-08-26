@@ -4,6 +4,9 @@
 .pure-menu .site-title a{
 /*color: #ffffff;*/
 }
+.pure-skin-wpitalyplus .pure-form input.pure-button-small {
+    font-size: 80%;
+}
 .site-content {
 	margin-top: 4em;
 	font-weight: 300;
@@ -18,7 +21,7 @@
 	border-radius: 3px;
 	box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
 }
-.widgetcard {
+.widget {
 	background-color: #ffffff;
 	margin-left: 2em;
 	margin-right: 2em;
@@ -35,7 +38,7 @@
 	margin-right: 2em;
 	margin-top: 2em;
 }
-.widgetcard {
+.widget {
 	margin-left: 2em;
 	margin-right: 2em;
 	margin-top: 2em;
@@ -53,7 +56,7 @@
 #secondary {
 	width: 100%;
 }
-.widgetcard {
+.widget {
 	margin-left: 2em;
 	margin-right: 2em;
 	margin-top: 2em;
@@ -61,8 +64,8 @@
 }
 @media screen and (max-width: 400px) { 
 .postcard-container {
-	margin-left: 2em;
-	margin-right: 2em;
+	margin-left: 1em;
+	margin-right: 1em;
 	margin-top: 2em;
 }
 #primary {
@@ -71,9 +74,9 @@
 #secondary {
 	width: 100%;
 }
-.widgetcard {
-	margin-left: 2em;
-	margin-right: 2em;
+.widget {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 	margin-top: 2em;
 }
 }

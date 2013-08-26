@@ -13,7 +13,7 @@
 			<aside id="search" class="widget widget_search">
 				<?php get_search_form(); ?>
 			</aside>
-
+			
 			<aside id="archives" class="widget">
 				<h1 class="widget-title"><?php _e( 'Archives', 'wpitalyplu_s' ); ?></h1>
 				<ul>

@@ -4,13 +4,13 @@
  */
     
 ?>
-<div class="pure-u">
+<div class="">
 <div class="postcard-container">
-<article id="post-<?php the_ID(); ?>" class="pure-u">
-	<header class="entry-header pure-u">
+<article id="post-<?php the_ID(); ?>" class="article">
+	<header class="entry-header">
 		
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="container-top"><div class="pure-u-1-5 avatar-container"><?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?></div><div class="entry-meta pure-u-3-5">
+		<div class="container-top"><div class="avatar-container pure-u-1-5"><?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?></div><div class="entry-meta pure-u-4-5">
 			<?php wpitalyplu_s_posted_on(); ?>
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
