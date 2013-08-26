@@ -6,6 +6,7 @@
  */
 ?>
 	<div id="secondary" class="widget-area pure-u-1-3" role="complementary">
+		<div class="widgetcard">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
@@ -30,4 +31,4 @@
 			</aside>
 
 		<?php endif; // end sidebar widget area ?>
-	</div><!-- #secondary -->
+	</div></div><!-- #secondary -->

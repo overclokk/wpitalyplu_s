@@ -44,7 +44,7 @@ function wpitalyplu_s_setup() {
 	
 	/*add a custom image size for postcards*/
 
-	add_image_size( 'postcard', 700 , 450 , true );
+	add_image_size( 'postcard', 700 , 400 , true );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
