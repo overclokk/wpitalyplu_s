@@ -12,19 +12,19 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area pure-u-2-3">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
+				<div class="single-container">
 				<?php get_template_part( 'content', 'page' ); ?>
-
+				<div class="comments-container">
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() )
 						comments_template();
 				?>
-
+			</div></div>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->

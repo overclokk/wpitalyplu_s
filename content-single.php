@@ -3,18 +3,16 @@
  * @package wpitalyplu_s
  */
 ?>
-<div class="postcard-container">
+<div class="post-container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<div class="container-top">
-			<div class="avatar-container pure-u-1-5">
+			<div class="avatar-container">
 			<?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?>
 			</div>
-			<div class="entry-meta pure-u-3-5">
-
-		<div class="">
+			<div class="entry-meta">
 			<?php wpitalyplu_s_posted_on(); ?>
-		</div></div><!-- .entry-meta -->
+		</div><!-- .entry-meta -->
 		<h1 class="entry-title pure-u"><?php the_title(); ?></h1>
 		<div class="pure-u cover-attachment-postcard"><!--Post Thumbnail-->
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php 
@@ -40,7 +38,7 @@
 			$category_list = get_the_category_list( __( ', ', 'wpitalyplu_s' ) );
 
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'wpitalyplu_s' ) );
+			$tag_list = get_the_tag_list( '#', __( ', #', 'wpitalyplu_s' ) );
 
 			if ( ! wpitalyplu_s_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
@@ -71,4 +69,4 @@
 
 		<?php edit_post_link( __( 'Edit', 'wpitalyplu_s' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
-</article><!-- #post-## -->
+</article></div><!-- #post-## -->

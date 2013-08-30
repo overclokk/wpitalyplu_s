@@ -12,15 +12,16 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php wpitalyplu_s_content_nav( 'nav-below' ); ?>
-
+			<div class="single-container"><?php get_template_part( 'content', 'single' ); ?>
+		<div class="comments-container">
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
 				if ( comments_open() || '0' != get_comments_number() )
 					comments_template();
 			?>
+		</div></div>
+		<div class="postcard-container">
+		<?php wpitalyplu_s_content_nav( 'nav-below' ); ?>
 
 		<?php endwhile; // end of the loop. ?>
 

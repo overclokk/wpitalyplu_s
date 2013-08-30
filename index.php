@@ -28,7 +28,7 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				?>
 			<?php endwhile; ?>
-			<?php wpitalyplu_s_content_nav( 'nav-below' ); ?>
+			<div class="postcard-container"><?php wpitalyplu_s_content_nav( 'nav-below' ); ?></div>
 
 		<?php else : ?>
 

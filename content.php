@@ -4,13 +4,16 @@
  */
     
 ?>
-<div class="">
 <div class="postcard-container">
 <article id="post-<?php the_ID(); ?>" class="article">
 	<header class="entry-header">
 		
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="container-top"><div class="avatar-container pure-u-1-5"><?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?></div><div class="entry-meta pure-u-4-5">
+		<div class="container-top">
+			<div class="avatar-container">
+				<?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?>
+			</div>
+			<div class="entry-meta">
 			<?php wpitalyplu_s_posted_on(); ?>
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
@@ -25,7 +28,7 @@
 
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'wpitalyplu_s' ) );
+				$tags_list = get_the_tag_list( '#', __( ', #', 'wpitalyplu_s' ) );
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
@@ -46,10 +49,20 @@
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary pure-u">
 		<?php the_excerpt(); ?>
+		<a class="read-more" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More', 'wpitalyplu_s' ); ?></a>
+		<p></p>
+		<div class="pure-u cover-attachment-postcard"><!--Post Thumbnail-->
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php 
+						if ( has_post_thumbnail() ) {
+						the_post_thumbnail('postcard');
+			}?></a>
+			</div><!--End Post Thumbnail-->
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content pure-u">
-		<?php the_excerpt(); ?><a class="" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More', 'wpitalyplu_s' ); ?></a><p></p>
+		<?php the_excerpt(); ?>
+		<a class="read-more" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More', 'wpitalyplu_s' ); ?></a>
+		<p></p>
 		<div class="pure-u cover-attachment-postcard"><!--Post Thumbnail-->
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php 
 						if ( has_post_thumbnail() ) {
@@ -64,4 +77,4 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-</article></div></div><!-- #post-## -->
+</article></div><!-- #post-## -->

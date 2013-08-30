@@ -9,19 +9,19 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area pure-u-2-3">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header postcard-container">
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
 							single_cat_title();
 
 						elseif ( is_tag() ) :
-							single_tag_title();
+							single_tag_title('#', true);
 
 						elseif ( is_author() ) :
 							/* Queue the first post, that way we know

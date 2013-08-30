@@ -7,12 +7,12 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area pure-u-2-3">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header postcard-container">
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'wpitalyplu_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 

@@ -96,6 +96,8 @@ function wpitalyplu_s_scripts() {
 
 	wp_enqueue_script( 'wpitalyplu_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'wpitalyplu_s-scrolltop', get_template_directory_uri() . '/js/scrolltop.js', array('jquery'),'', true );
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -133,13 +135,13 @@ require get_template_directory() . '/inc/jetpack.php';
 
 /*add class to style active menu links*/
 
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-function special_nav_class($classes, $item){
-     if( in_array('current-menu-item', $classes) ){
-             $classes[] = 'pure-menu-selected ';
-     }
-     return $classes;
-}
+//add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+//function special_nav_class($classes, $item){
+     //if( in_array('current-menu-item', $classes) ){
+             //$classes[] = 'pure-menu-selected ';
+     //}
+     //return $classes;
+//}
 /*Custom excerpt leight. Change number after return to set the number of words you want*/
 
 function custom_excerpt_length( $length ) {
