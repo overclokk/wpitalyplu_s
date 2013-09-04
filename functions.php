@@ -74,8 +74,16 @@ add_action( 'after_setup_theme', 'wpitalyplu_s_setup' );
  */
 function wpitalyplu_s_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'wpitalyplu_s' ),
+		'name'          => __( 'Index Sidebar', 'wpitalyplu_s' ),
 		'id'            => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+    	register_sidebar( array(
+		'name'          => __( 'Post/Pages Sidebar', 'wpitalyplu_s' ),
+		'id'            => 'sidebar-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',

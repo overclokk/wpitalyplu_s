@@ -8,9 +8,10 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area image-attachment">
-		<main id="main" class="site-main" role="main">
-
+	<div id="primary" class="content-area pure-u-1">
+		<main id="main" class="site-main image-attachment" role="main">
+           <div class="single-container">
+               <div class="post-container">
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -79,7 +80,8 @@ get_header();
 					?>
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-## -->
-
+            </div>
+            <div class="comments-container">
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
 				if ( comments_open() || '0' != get_comments_number() )
@@ -87,7 +89,8 @@ get_header();
 			?>
 
 		<?php endwhile; // end of the loop. ?>
-
+                </div>
+                 </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

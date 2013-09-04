@@ -27,33 +27,21 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>-->
 
-		<nav id="site-navigation" class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal" role="navigation">
-			<h1 class="site-title pure-menu-heading"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="menu-container">
+                <div class="menu-image">
+                    <img src="wp-content/themes/wpitalyplu_s/css/images/menu-toggle.png" class="menu-toggle">
+                </div>
+                <div class="menu-header">
+                    <h1 class="site-title">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                    </h1>
+                </div>
 
-			<?php //set menu's elements
-						$defaults = array(
-							'theme_location'  => 'primary',
-							'menu'            => '',
-							'container'       => '',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'nav-menu',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '<ul id="pure-nav">%3$s</ul>',
-							'depth'           => 0,
-							'walker'          => ''
-						);
-
-						wp_nav_menu( $defaults ); //call menu here
-
-						?>
-		</nav><!-- #site-navigation -->
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+            
+		  </div>
+        </nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div class="pure-g-r">
 	<div id="content" class="site-content">

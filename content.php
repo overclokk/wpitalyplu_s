@@ -4,6 +4,15 @@
  */
     
 ?>
+ <?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '<div class="tags-item">#', '</div><div class="tags-item tags-item-after">#', '</div>' );
+				if ( $tags_list ) :
+			?>
+			<span class="tags-links">
+				<?php printf( $tags_list ); ?>
+			</span>
+			<?php endif; // End if $tags_list ?>
 <div class="postcard-container">
 <article id="post-<?php the_ID(); ?>" class="article">
 	<header class="entry-header">
@@ -11,7 +20,7 @@
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="container-top">
 			<div class="avatar-container">
-				<?php echo get_avatar( get_the_author_meta('ID'), 70 ); ?>
+				<?php echo get_avatar( get_the_author_meta('ID'), 90 ); ?>
 			</div>
 			<div class="entry-meta">
 			<?php wpitalyplu_s_posted_on(); ?>
@@ -25,21 +34,7 @@
 				<?php printf( __( 'in %1$s', 'wpitalyplu_s' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
-
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '#', __( ', #', 'wpitalyplu_s' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'wpitalyplu_s' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
-
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'wpitalyplu_s' ), __( '1 Comment', 'wpitalyplu_s' ), __( '% Comments', 'wpitalyplu_s' ) ); ?></span>
-		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'wpitalyplu_s' ), '<span class="edit-link">', '</span>' ); ?>
 	</div></div><!-- .entry-meta -->
@@ -69,12 +64,6 @@
 						the_post_thumbnail('postcard');
 			}?></a>
 			</div><!--End Post Thumbnail-->
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'wpitalyplu_s' ),
-				'after'  => '</div>',
-			) );
-		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 </article></div><!-- #post-## -->
