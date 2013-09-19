@@ -295,6 +295,10 @@ blockquote {
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
     background: #427fed!important;
 }
+/* Fix admin toolbar issue */
+body.admin-bar #site-navigation .menu-container {
+	top:28px;
+}
 /**************************************** Comments area **********************************/
 
 .comment-reply-title {
