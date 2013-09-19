@@ -1,9 +1,9 @@
 /*
 Theme Name: wpitalyplu_s
-Theme URI:
-Author: iGenius
-Author URI: 
-Description: Minimalistic, responsive and flat theme in google plus style.
+Theme URI: http://wpitalyplus.com
+Author: iGenius, Massimo Della Rovere, pr0v4
+Author URI: http://wpitalyplus.com
+Description: Minimalistic, responsive and flat theme inspired by Google's design philosophy.
 Version: 1.0
 License: GNU General Public License
 License URI: license.txt
@@ -15,15 +15,14 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
  wpitalyplu_s is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+ and PURECSS by YUI http://purecss.io
 
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
+ A special mention to Mattia "Deshack" Migliorini for giving us a LESS version of PURECSS
+ https://github.com/deshack/pure-less
+
+ TGM Plugin Activation class provided by Thomas Griffin https://github.com/thomasgriffin/TGM-Plugin-Activation
 */
 
-
-/* =Reset
 -------------------------------------------------------------- */
 .pure-skin-wpitalyplus .pure-form input.pure-button-small {
     font-size: .86em;
