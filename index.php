@@ -28,7 +28,6 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				?>
 			<?php endwhile; ?>
-			<div class="postcard-container"><?php wpitalyplu_s_content_nav( 'nav-below' ); ?></div>
 
 		<?php else : ?>
 
@@ -37,6 +36,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+        <div class="postcard-container nav-container"><?php wpitalyplu_s_content_nav( 'nav-below' ); ?></div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

@@ -14,7 +14,7 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 </head>
 
@@ -30,7 +30,7 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="menu-container">
                 <div class="menu-image">
-                    <img src="wp-content/themes/wpitalyplu_s/css/images/menu-toggle.png" class="menu-toggle">
+                    <img src="<?php echo get_stylesheet_directory_uri() .'/images/menu-toggle.png'?>" class="menu-toggle">
                 </div>
                 <div class="menu-header">
                     <h1 class="site-title">

@@ -13,7 +13,7 @@
 				<?php printf( $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
-<div class="postcard-container">
+<div <?php post_class('postcard-container'); ?>>
 <article id="post-<?php the_ID(); ?>" class="article">
 	<header class="entry-header">
 		

@@ -98,7 +98,7 @@ add_action( 'widgets_init', 'wpitalyplu_s_widgets_init' );
 function wpitalyplu_s_scripts() {
 	wp_enqueue_style( 'wpitalyplu_s-style', get_stylesheet_directory_uri() .'/css/pure.css' );
 	
-	wp_enqueue_style( 'wpitalyplu_s-my-style', get_stylesheet_directory_uri() .'/css/style.css' );
+	wp_enqueue_style( 'wpitalyplu_s-my-style', get_stylesheet_directory_uri() .'/style.css' );
 
 	wp_enqueue_script( 'wpitalyplu_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -115,11 +115,6 @@ function wpitalyplu_s_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wpitalyplu_s_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -161,3 +156,5 @@ function wpitalyplu_s_excerpt_more( $more ) {
 	return '...<p></p>';
 }
 add_filter( 'excerpt_more', 'wpitalyplu_s_excerpt_more' );
+
+/* Here start the section about sz-google plugin recommended */
