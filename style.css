@@ -599,6 +599,7 @@ a.read-more {
 	position: relative;
     padding-left: 1em;
     padding-right: 1em;
+    line-height: 2.1em;
 }
 .main-navigation a {
 	display: block;
@@ -611,16 +612,19 @@ a.read-more {
 	display: none;
 	float: left;
 	position: absolute;
-		top: 1em;
-		left: -3em;
+		top: 2.1em;
+		left: -4px;
     background-color: white;
     border: 1px solid #ccc;
-    border-radius: 2px;
+    border-top: none;
+    border-radius: 4px;
 	z-index: 99999;
 }
 .main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
+	left: 99%;
+	top: -1px;
+	border-top: 1px solid #ccc;
+	border-left: none;
 }
 .main-navigation ul ul a {
     color: #666;
@@ -628,7 +632,9 @@ a.read-more {
 .main-navigation ul ul li {
     margin-left: 3px;
     background-color: white;
-    min-width: 150px;
+    line-height: 1em;
+    width: 120px;
+    padding-left: 1.5em;
 }
 .main-navigation li:hover > a {
     text-decoration: none;
@@ -655,7 +661,7 @@ a.read-more {
     color: #427fed;
 }
 .sub-menu {
-    text-align: center;
+    /*text-align: center;*/
 }
 .sub-menu li {
     padding-bottom: 1em;
@@ -688,35 +694,14 @@ a.read-more {
     .main-navigation ul ul {
         position: absolute;
         left: 0;
+        top:4em;
+        text-align:left;
     }
      .main-navigation ul li {
         padding-bottom: 1em;
         padding-top: 1em;
     }
 }
-
-/*.site-title {
-/*background-color: #ff0000;*/
-/*}
-.pure-menu .site-title a{
-	font-weight: 300;
-}
-#pure-nav li a {
-	font-weight: 300;
-}
-#pure-nav li a:hover {
-	text-decoration: none;
-	background: none;
-	color: #427fed;
-}
-#pure-nav li a:active {
-	text-decoration: none;
-	background: none;
-	color: #427fed;
-}
-.pure-menu-heading h1 {
-    display: inline-block;
-}*/
 /************************************************* Widget *********************************************************/
 /*************************************************       **********************************************************/
 /******************************************************************************************************************/
